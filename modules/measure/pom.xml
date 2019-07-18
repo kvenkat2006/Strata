@@ -98,14 +98,18 @@
             <goals>
               <goal>shade</goal>
             </goals>
-            <configuration>
-              <relocations>
-                <relocation>
-                  <pattern>com.google.guava</pattern>
-                  <shadedPattern>com.shadedgoogle.guava</shadedPattern>
-                </relocation>
-              </relocations>
-            </configuration>
+              <configuration>
+                <relocations>
+                  <relocation>
+                    <pattern>com.google.common</pattern>
+                    <shadedPattern>com.shadedgoogle.common</shadedPattern>
+                    <includes>
+                      <include>*:*</include>
+                    </includes>
+                  </relocation>
+                </relocations>
+                <shadedArtifactAttached>false</shadedArtifactAttached>
+              </configuration>
           </execution>
         </executions>
       </plugin>

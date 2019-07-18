@@ -162,6 +162,12 @@
           <plugin>
             <artifactId>maven-shade-plugin</artifactId>
             <configuration>
+              <relocations>
+                <relocation>
+                  <pattern>com.google.common</pattern>
+                  <shadedPattern>com.shadedgoogle.common</shadedPattern>
+                </relocation>
+              </relocations>
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <shadedClassifierName>jar-with-dependencies</shadedClassifierName>
               <filters>

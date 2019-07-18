@@ -41,10 +41,14 @@
               <configuration>
                 <relocations>
                   <relocation>
-                    <pattern>com.google.guava</pattern>
-                    <shadedPattern>com.shadedgoogle.guava</shadedPattern>
+                    <pattern>com.google.common</pattern>
+                    <shadedPattern>com.shadedgoogle.common</shadedPattern>
+                    <includes>
+                      <include>*:*</include>
+                    </includes>
                   </relocation>
                 </relocations>
+                <shadedArtifactAttached>false</shadedArtifactAttached>
               </configuration>
             </execution>
           </executions>
